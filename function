@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+import subprocess
+#funtion 1
+def uname_func():
+
+ uname = "uname"
+ uname_arg = "-a"
+ print "System info is %s " % uname
+ subprocess.call([uname, uname_arg])
+
+#function 2
+def disk_func():
+ diskspace = "df"
+ diskspace_arg = "-h"
+ print "Disk space usage is %s" % diskspace
+ subprocess.call([diskspace, diskspace_arg])
+#Main function that call other function
+def main():
+ uname_func()
+ disk_func()
+main()
+
+
+
+
+
+
